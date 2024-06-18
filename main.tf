@@ -149,3 +149,29 @@ module "s3-bucket" {
   }
 }
 
+module "s3-bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.1.2"
+  
+  bucket = "jjtech-terraform3"
+  
+  block_public_acls = true
+  
+  versioning = {
+    enabled = true
+  }
+}
+
+module "s3-bucket" {
+  source  = "terraform-aws-modules/s3-bucket/aws"
+  version = "4.1.2"
+  
+  bucket = "jjtech-terraform4"
+  
+  block_public_acls = true
+  
+  versioning = {
+    enabled = true
+  }
+}
+
